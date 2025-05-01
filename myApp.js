@@ -1,11 +1,10 @@
 let express = require('express');
-console.log("Hello World");
+//console.log("Hello World");
 
 let app = express();
-app.get(function(req,res)
+app.get('/',function(req,res)
         {
-          res.send(console.log("Hello Express"
-                              ))
+          res.send("Hello Express")
         }
        );
 
