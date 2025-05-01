@@ -1,12 +1,22 @@
 /* the 'body' selector is required for the tests to pass */
 /* You can change the style attributes if you want */
 body {
-  background-color: #222;
-  color: #ddd;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e21d1d;
+  color: #000000;
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.card-name{
+width: 60vw;
+height: auto;
+  border: 4px solid green;
+  padding: 1rem;
+}
 h1 {
   font-size: 4em;
 }
