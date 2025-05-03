@@ -14,7 +14,7 @@ app.get("/",function(req,res)
         }
        );
        app.get("/json",function(req,res){
-        res.json({"message":"Hello Node.js"})
+        let dataJson = res.json({message:"Hello json"});
         
        })
 
