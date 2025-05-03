@@ -17,7 +17,7 @@ app.get("/",function(req,res)
        app.get("/json",function(req,res){
         console.log(process.env.MESSAGE_STYLE);
         
-        let dataJson = res.json(process.env.MESSAGE_STYLE);
+        let dataJson = res.json(process.env.MESSAGE_STYLE.toUpperCase());
         
        })
 
