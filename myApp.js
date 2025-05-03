@@ -13,6 +13,10 @@ app.get("/",function(req,res)
       res.sendFile(path.join(__dirname ,'views','index.html'))
         }
        );
+       app.get("/relativePath/Json",function(req,res){
+        res.json({"message":"Hello Node.js"})
+        
+       })
 
 
       //  app.get('/',(req,res)=>{
