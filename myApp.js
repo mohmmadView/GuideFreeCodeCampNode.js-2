@@ -15,21 +15,25 @@ app.get("/",function(req,res)
       res.sendFile(path.join(__dirname ,'views','index.html'))
         }
        );
-       app.get("/json",function(req,res){
-         const messageStyle = process.env.MESSAGE_STYLE;
-  const responseMessage = messageStyle === 'uppercase' ? "HELLO JSON" : "Hello json";
-  res.json({ message: responseMessage });
-  
-       })
+     if (process.env.MESSAGE_STYLE === "uppercase"){
 
+app.get("/json", (req, res) => {
 
-      //  app.get('/',(req,res)=>{
-      //   res.sendFile(path.join(__dirname,'view','index.html'))
-      //  })
-      //  app.listen(3000,()=>{
-      //   console.log('server is runnig on port 3000');
-        
-      //  });
+res.json({message: "HELLO WORLD"})
+
+});
+
+}
+
+else{
+
+app.get("/json", (req, res) => {
+
+res.json({message: "hello world"})
+
+});
+
+}
 
 
 
