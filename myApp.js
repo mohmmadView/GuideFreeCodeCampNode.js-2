@@ -1,4 +1,5 @@
 require('dotenv').config();
+const { json } = require('body-parser');
 let express = require('express');
 const { log } = require('fcc-express-bground');
 //console.log("Hello World");
@@ -15,10 +16,12 @@ app.get("/",function(req,res)
         }
        );
        app.get("/json",function(req,res){
-        console.log(process.env.MESSAGE_STYLE);
-        
-        let dataJson = res.json(process.env.MESSAGE_STYLE.toUpperCase());
-        
+        let message = "Hello json";
+  if (process.env.MESSAGE_STYLE === 'uppercase') {
+    message = message.toUpperCase();
+  }
+  res.json({ message: message });
+               
        })
 
 
