@@ -1,5 +1,5 @@
-let express = require('express');
 require('dotenv').config();
+let express = require('express');
 const { log } = require('fcc-express-bground');
 //console.log("Hello World");
 let path = require('path');
