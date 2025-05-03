@@ -19,7 +19,7 @@ app.get("/",function(req,res)
 
 app.get("/json", (req, res) => {
 
-res.json({message: "HELLO WORLD"})
+res.json({message: "HELLO JSON"})
 
 });
 
@@ -29,7 +29,7 @@ else{
 
 app.get("/json", (req, res) => {
 
-res.json({message: "hello world"})
+res.json({message: "Hello json"})
 
 });
 
