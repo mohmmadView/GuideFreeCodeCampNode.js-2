@@ -1,4 +1,5 @@
 let express = require('express');
+require('dotenv').config();
 const { log } = require('fcc-express-bground');
 //console.log("Hello World");
 let path = require('path');
@@ -14,7 +15,9 @@ app.get("/",function(req,res)
         }
        );
        app.get("/json",function(req,res){
-        let dataJson = res.json({message:"Hello json"});
+        console.log(process.env.MESSAGE_STYLE);
+        
+        let dataJson = res.json(process.env.MESSAGE_STYLE);
         
        })
 
