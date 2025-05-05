@@ -1,11 +1,12 @@
 require('dotenv').config();
-const { json } = require('body-parser');
 let express = require('express');
 const { log } = require('fcc-express-bground');
 //console.log("Hello World");
 let path = require('path');
 log("path",path.dirname)
 let app = express();
+var message = process.env.MESSAGE_STYLE;
+
 // let absolutePath = __dirname + '/relativePath/file.ext'
        app.use('/public',express.static(path.join(__dirname , 'public')));
        
