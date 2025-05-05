@@ -14,27 +14,14 @@ app.get("/",function(req,res)
        );
        console.log(process.env.MESSAGE_STYLE);
        
-     if (process.env.MESSAGE_STYLE === "uppercase"){
-
-app.get("/json", (req, res) => {
-
-res.json({message: "Hello json"})
-
+ app.get('/json', (req, res) => {
+  let message = "Hello json";
+  // خواندن مقدار متغیر محیطی درون route handler
+  if (process.env.MESSAGE_STYLE === 'uppercase') {
+    message = message.toUpperCase();
+  }
+  res.json({ message: message });
 });
-
-}
-
-else{
-
-app.get("/json", (req, res) => {
-
-res.json({message: "HELLO JSON"})
-
-});
-
-}
-
-
 
 
 
